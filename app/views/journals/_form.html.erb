@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label :customer_id %><br />
-    <%= f.number_field :customer_id %>
+    <%= f.collection_select :customer_id, Customer.all, :id, :email, :default => @current_customer%>
   </div>
   <div class="field">
     <%= f.label :title %><br />

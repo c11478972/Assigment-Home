@@ -1,30 +1,35 @@
 <p id="notice"><%= notice %></p>
 
+  <%= image_tag(@journal.headimage, :size =>'460x265') %>
 <p>
-  <b>Customer:</b>
-  <%= @journal.customer_id %>
-</p>
-
-<p>
-  <b>Title:</b>
-  <%= @journal.title %>
-</p>
-
-<p>
+	<h1>
+		<%= @journal.title %>
+	</h1>
   <b>Author:</b>
   <%= @journal.author %>
 </p>
-
-<p>
-  <b>Headimage:</b>
-  <%= @journal.headimage %>
-</p>
-
 <p>
   <b>Intialentry:</b>
   <%= @journal.intialentry %>
 </p>
+<% if @journal.posts.empty?%>
+	<h3>No Subsequent Entries</h3>
+<%else%>
+	<%@journal.posts.each do |p|%>
+		<p>
+			<%= p.content%>
+		</p>
+	<%end%>
+	<br/><h6>Number of entries to date :<%= @journal.posts.count%></h6>
+<%end%>
+
+	<h2>Add an Entry</h2>
+	<%= form_for([@journal, Post.new]) do |f|%>
+		<%= f.text_area :content, :rows => 3 %>
+			<div class="actions">
+				<%= f.submit "Post a Comment"%>
+			</div>
+	<%end%>
 
 
-<%= link_to 'Edit', edit_journal_path(@journal) %> |
 <%= link_to 'Back', journals_path %>

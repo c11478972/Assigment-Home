@@ -22,6 +22,8 @@ end
 
 gem 'jquery-rails', '2.0.2'
 
+gem 'carrierwave'
+
 gem 'geocoder'
 
 # To use ActiveModel has_secure_password

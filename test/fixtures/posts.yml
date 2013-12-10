@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  content: MyText
+  customer_id: 1
+  journal_id: 1
+
+two:
+  content: MyText
+  customer_id: 1
+  journal_id: 1

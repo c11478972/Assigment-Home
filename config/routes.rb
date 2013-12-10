@@ -1,6 +1,8 @@
 Assignment1::Application.routes.draw do
 
-  resources :journals
+  resources :journals do
+		resources :posts
+  end
 
   resources :races
 
@@ -28,6 +30,7 @@ get "sessions/new"
   resources :customers
   
   resources :sessions
+  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

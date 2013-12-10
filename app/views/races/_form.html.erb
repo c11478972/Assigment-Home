@@ -17,7 +17,7 @@
   </div>
   <div class="field">
     <%= f.label :circutmap %><br />
-    <%= f.text_field :circutmap %>
+    <%= f.file_field :circutmap %>
   </div>
   <div class="field">
     <%= f.label :trailer %><br />
@@ -29,15 +29,15 @@
   </div>
   <div class="field">
     <%= f.label :vehicletype %><br />
-    <%= f.text_field :vehicletype %>
+    <%= f.select :vehicletype,["Off Road","Sports", "Hatchbacks","Super Cars"] %>
   </div>
   <div class="field">
     <%= f.label :racetype %><br />
-    <%= f.text_field :racetype %>
+	<%= f.select :racetype,["Rally","24 HR. Endurance", "D-Class","C-Class","B-Class","A-Class","Classics"] %>
   </div>
   <div class="field">
     <%= f.label :sponsor %><br />
-    <%= f.number_field :sponsor %>
+    <%= f.collection_select :sponsor, ServiceStation.all, :id, :name %>
   </div>
   <div class="field">
     <%= f.label :location %><br />

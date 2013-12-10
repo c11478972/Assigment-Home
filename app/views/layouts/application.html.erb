@@ -22,7 +22,7 @@
 				<li><%= link_to "Sign Out", signout_path %></li>
 			<% end %>
 			<li><%= link_to "About", about_path%></li>
-			<li><%= link_to "Journal", 'journals_path' %></li>
+			<li><%= link_to "Journal", journals_path %></li>
 			<li><%=mail_to "c11478972@mydit.ie", "Contact Us"%></li>
 			<li><%=link_to "Register", new_customer_path %></li>
 			<li><%=link_to "Races", races_path %></li>
@@ -47,6 +47,7 @@
 					<%else%>
 						<li><%=link_to "Local Garages", signin_path %></li>
 					<%end%>
+					<li><%=link_to "All Garages", service_stations_path %></li>
 					<li><%=link_to "Road Side Assistance", 'http://www.theaa.ie/'%></li>
 					<li><%=link_to "Selling Your Car", 'http://www.webuyanycar.com/'%></li>
 					<li><%=link_to "Insurance", 'https://www.chill.ie/'%></li>

@@ -38,12 +38,12 @@ Assignment1::Application.configure do
   # These options are only need if you choose smtpdelivery
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-	:enable_starttls_auto => true,
-	:address => 'smtp.gmail.com',
-	:port => 587,
-	:domain => 'www.example.com',
-	:authentication => :plain,
-	:user_name => 'yourgmailaddress',
-	:password => 'yourpassword'
-  }
+		:enable_starttls_auto => true,
+		:address  => 'smtp.gmail.com',
+		:port => 587,
+		:domain => 'www.example.com',
+		:authentication => :plain,
+		:user_name => 'stephenoken@gmail.com',
+		:password => 'Gpjedyqn93'
+		}
 end
