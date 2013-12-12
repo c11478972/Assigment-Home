@@ -22,6 +22,8 @@ end
 
 gem 'jquery-rails', '2.0.2'
 
+gem 'client_side_validations'
+
 gem 'carrierwave'
 
 gem 'geocoder'

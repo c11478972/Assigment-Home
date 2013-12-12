@@ -2,8 +2,9 @@
 <html>
 <head>
 	<title>Coldstreamers</title>
-	 <%= stylesheet_link_tag  "http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/redmond/jquery-ui.css", "application", :media => "all" %>
-  <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js", "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js", "application" %>
+	<%= stylesheet_link_tag  "http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/redmond/jquery-ui.css", "application", :media => "all" %>
+	<%= javascript_include_tag :defaults, "rails.validations" %>
+	<%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js", "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js", "application" %>
 	<%= csrf_meta_tags %>
 </head>
 <body>
@@ -30,7 +31,7 @@
 			<li><%=link_to "Vehicles", customer %></li><!--This links to the show view of the customer page, which has a loop displaying all of thier cars-->
 			<li>
 				<div id="search">
-					<%= render :partial => 'race/search'%>
+					<%= render :partial => 'races/search'%>
 				</div>
 			</li>
 		</ul>

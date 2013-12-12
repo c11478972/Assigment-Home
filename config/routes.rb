@@ -6,7 +6,7 @@ Assignment1::Application.routes.draw do
 
   resources :races
 	
-	match '/search' => 'race#_search'
+	match '/search' => 'races#_search'
 	match '/signin', :to => 'sessions#new'# Allows to put a link on a html pages
 get "sessions/new"
 	

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131211201622) do
+ActiveRecord::Schema.define(:version => 20131212204126) do
 
   create_table "customers", :force => true do |t|
     t.string   "first_name"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(:version => 20131211201622) do
     t.string   "password_digest"
     t.float    "latitude"
     t.float    "longitude"
+    t.string   "auth_token"
   end
 
   create_table "journals", :force => true do |t|

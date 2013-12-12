@@ -3,7 +3,7 @@ module ApplicationHelper
 		if session[:customer_id].nil?
 			return
 		else
-			@current_customer = Customer.find_by_id(session[:customer_id])
+			@current_customer = Customer.find_by_auth_token!(cookies[:auth_token])
 		end
 	end
 end

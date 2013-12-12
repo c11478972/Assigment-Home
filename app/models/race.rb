@@ -7,7 +7,7 @@ class Race < ActiveRecord::Base
 	
 	def self.search(search)
 		search_condition = search + "%"
-		find(:all, :conditions=>['racenameLIKE ?', search_condition])
+		find(:all, :conditions=>['racename LIKE ?', search_condition])
 	end
 	
 	def must_have_valid_trailer#doesn't seem to work
