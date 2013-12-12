@@ -17,11 +17,11 @@
 
 <p>
   <b>Address:</b>
-  <%= @service_station.address %>
+  <%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@service_station.latitude}%2C#{@service_station.longitude}" %>
 </p>
 <p>
   <b>Location:</b>
-  <%= @service_station.location.postal_code %>
+  <%= @service_station.fulladdress %>
 </p>
 <p>
   <b>Logo:</b>

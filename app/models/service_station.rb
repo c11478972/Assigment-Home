@@ -9,5 +9,11 @@ class ServiceStation < ActiveRecord::Base
 	validates :sstype, presence: true
 	validates :contact_number, uniqueness: true
 	validates :address, uniqueness: true
-	validates :contact_number, format:{with: /\A([01]|[08]+)([0-9]{8,9})\Z/} #Accepts either a landline number or a 
+	validates :contact_number, format:{with: /\A([01]|[08]+)([0-9]{8,9})\Z/} #Accepts either a landline number or a 	
+	geocoded_by :fulladdress
+	after_validation :geocode, :if => :address_changed?
+	
+	def fulladdress
+		fulladdress = self.address + " " + self.location.postal_code
+	end
 end

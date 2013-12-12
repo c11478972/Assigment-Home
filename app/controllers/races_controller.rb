@@ -2,6 +2,7 @@ class RacesController < ApplicationController
   # GET /races
   # GET /races.json
   skip_filter :authorise
+  
   def index
     @races = Race.all
 
@@ -10,6 +11,16 @@ class RacesController < ApplicationController
       format.json { render json: @races }
     end
   end
+  
+  def search
+		@races = Race.search params[:q]
+		unless @races.empty?
+		render 'index'
+		else
+		flash[:notice] = 'No movies match the search'
+		render 'index'
+		end
+	end 
 
   # GET /races/1
   # GET /races/1.json

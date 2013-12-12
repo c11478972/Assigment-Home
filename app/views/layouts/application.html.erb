@@ -28,6 +28,11 @@
 			<li><%=link_to "Races", races_path %></li>
 			<% customer = @current_customer %> <!--This is to allow a logged user to view their vehicle details-->
 			<li><%=link_to "Vehicles", customer %></li><!--This links to the show view of the customer page, which has a loop displaying all of thier cars-->
+			<li>
+				<div id="search">
+					<%= render :partial => 'race/search'%>
+				</div>
+			</li>
 		</ul>
 	</div>
 	<!--Start Page-->

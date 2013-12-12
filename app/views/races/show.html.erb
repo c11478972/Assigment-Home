@@ -12,7 +12,7 @@
 
 <p>
   <b>Trailer:</b>
-  <%= @race.trailer %>
+  <%= sanitize @race.trailer, :tags =>['iframe']%>
 </p>
 
 <p>
@@ -37,7 +37,12 @@
 
 <p>
   <b>Location:</b>
-  <%= @race.location %>
+  <%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@race.latitude}%2C#{@race.longitude}" %>
+</p>
+
+<p>
+  <b>Full Address:</b>
+  <%= @race.fulladdress %>
 </p>
 
 <p>

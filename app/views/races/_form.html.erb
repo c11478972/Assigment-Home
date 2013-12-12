@@ -24,7 +24,7 @@
     <%= f.text_area :trailer %>
   </div>
   <div class="field">
-    <%= f.label :dor %><br />
+    <%= f.label :'Date of the Race' %><br />
     <%= f.text_field  :dor,id: :datepicker %>
   </div>
   <div class="field">
@@ -40,8 +40,12 @@
     <%= f.collection_select :sponsor, ServiceStation.all, :id, :name %>
   </div>
   <div class="field">
+    <%= f.label :address %><br />
+    <%= f.text_field :address %>
+  </div>
+  <div class="field">
     <%= f.label :location %><br />
-    <%= f.text_field :location %>
+	<%= f.collection_select :location, Location.all, :id, :postal_code %>
   </div>
   <div class="field">
     <%= f.label :telephone %><br />
