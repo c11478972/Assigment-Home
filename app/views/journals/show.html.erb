@@ -22,7 +22,7 @@
 	<%end%>
 	<br/><h6>Number of entries to date :<%= @journal.posts.count%></h6>
 <%end%>
-
+<%@customer = Customer.find_by_id(params[:customer_id])%>
 	<h2>Add an Entry</h2>
 	<%= form_for([@journal, Post.new]) do |f|%>
 		<%= f.text_area :content, :rows => 3 %>
